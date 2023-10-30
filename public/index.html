@@ -125,7 +125,7 @@ https://templatemo.com/tm-571-hexashop
                                 <h4>We Are Hexashop</h4>
                                 <span>Awesome, clean &amp; creative HTML5 Template</span>
                                 <div class="main-border-button">
-                                    <a href="#">Purchase Now!</a>
+                                    <a href="#" onclick="dlpush();">Purchase Now!</a>
                                 </div>
                             </div>
                             <img src="assets/images/left-banner-image.jpg" alt="">
@@ -147,7 +147,7 @@ https://templatemo.com/tm-571-hexashop
                                                 <h4>Women</h4>
                                                 <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    <a href="#" onclick="dlpushgender();">Discover More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -859,6 +859,24 @@ https://templatemo.com/tm-571-hexashop
                 
             });
         });
+
+        function dlpush() {
+            console.log('test')
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'get_quote',
+                'age': 25
+            })
+        }
+
+        function dlpushgender() {
+            console.log('test')
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'get_quote',
+                'gender': 'male'
+            })
+        }
 
     </script>
 
